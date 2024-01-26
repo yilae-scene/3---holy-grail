@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;800&family=VT323&display=swap');
+
+*{
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding:0;
+  font-family: "Poppins";
+  background-color: #FAF9F6;
+}
+ul, li {
+  padding: 0;
+  list-style-type: none;
+}
+
+img{
+  width:100%;
+}
+
+.anchor-cate{
+  display:flex;
+  flex-direction: column ;
+
+  
+}
+
+a{
+  color:black;
+}
+main{
+  display:grid;
+  column-gap:2em ;
+  grid-template-areas: 
+  "head head head"
+  "aside-l content aside-r"
+  "footer footer footer";
+}
+
+header{
+  grid-area: head;
+  padding:1em 0;
+  text-align: center;
+  border-bottom: 1px solid rgba(108, 108, 108, 0.352);
+}
+
+
+.aside-left{
+  grid-area:aside-l;
+  margin:2em 3em 0 1em;
+  font-size:.81em;
+}
+
+.categories{
+  margin-bottom: 1em;
+
+}
+.aside-right{
+  grid-area:aside-r;
+   margin:2em 3em 0 1em;
+  font-size:.81em;
+  line-height: 1px;
+}
+
+.content{
+  grid-area:content;
+  padding:1.5em;
+  border-left: 1px solid rgba(128, 128, 128, 0.304) ;
+  border-right: 1px solid rgba(128, 128, 128, 0.304);
+
+}
+
+footer{
+  grid-area:footer;
+  padding:1em 0;
+  text-align: center;
+  border-top: 1px solid rgba(128, 128, 128, 0.304);
+}
+
+@media screen and (max-width:760px){
+    main{
+      display:grid;
+      grid-template-areas: 
+      "head head head"
+      "aside-l aside-l aside-l"
+      "content content aside-r"
+      "footer footer footer";
+    }
+
+    header{
+      grid-area: head;
+    }
+
+    .aside-left{
+      grid-area:aside-l;
+      border-bottom: 1px solid rgba(108, 108, 108, 0.352); 
+      padding-bottom: 1em;
+  
+    }
+
+    .aside-right{
+    grid-area:aside-r;
+    }
+
+    .content{
+    grid-area:content;
+    }
+
+    .anchor-cate{
+      display:flex;
+      flex-direction: row;
+      gap:.53em; 
+      
+}
+    
+}
+
+    
+
+
+@media screen and (max-width:600px){
+    main{
+      display:grid;
+      grid-template-areas: 
+      "head head head"
+      "aside-l aside-l aside-l"
+      "content content content"
+      "aside-r aside-r aside-r"
+      "footer footer footer";
+    }
+    header{
+      grid-area: head;
+    }
+    .aside-left{
+      grid-area:aside-l;
+     
+    }
+
+    .aside-right{
+    grid-area:aside-r;
+    }
+
+    .content{
+    grid-area:content;
+    border:none;
+    border-bottom: 1px solid rgba(108, 108, 108, 0.352); 
+    }
+
+    .anchor-cate{
+      font-size:calc(100vw - 98vw);
+        }
+} 
